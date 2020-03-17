@@ -21,7 +21,7 @@ def get_db():
         # Conectarse a Mongo Atlas con mongoengine
         # En la URI, /test? es la bbdd
         g.db = connect(
-                    host='URI'
+                    host='mongodb+srv://javiBarrientos:pass@cluster-oq5pl.mongodb.net/cluster?retryWrites=true&w=majority'
                 )
         # Item necesita encontrar la referencia la conexión
         # devuelta por connect()
