@@ -28,7 +28,6 @@ class Factory():
 
         return items
 
-
     @staticmethod
     def initRepo():
 
