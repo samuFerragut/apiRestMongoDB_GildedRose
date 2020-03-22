@@ -16,12 +16,21 @@ class Service():
         'quality': fields.Integer
     }
 
+    @staticmethod
+    @marshal_with(resource_fields)
+    def inventario():
+        db = get_db()
+        items = []
 
-@staticmethod
-@marshal_with(resource_fields)
-def inventario():
-    db = get_db()
-    items = []
-    for i in g.Item.objects():
-        items.append(i)
-        return items
+        for i in g.Item.objects():
+            items.append(i)
+            return items
+
+    @staticmethod
+    def postItem(args):
+        db = get_db()
+
+        item = g.Item(name=args['name'])
+        item.sell_in = args['sell_in']
+        item.quality = args['quality']
+        item.save()
