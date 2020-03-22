@@ -17,10 +17,15 @@ class Service():
     }
 
     @staticmethod
-    def Inventario():
+    def inventario():
         db = get_db()
 
         items = []
         for item in g.Item.objects():
             items.append(item)
         return items
+
+
+@staticmethod
+def update_quality():
+# terminar mas tarde, metodo mas chungo
