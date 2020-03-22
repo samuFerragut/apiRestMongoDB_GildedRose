@@ -31,6 +31,7 @@ class Service():
         item = g.Item.objects(name=item_name)
 
         if not item:
+            # Abort chapter 2 page 22
             abort(404, message="Este item no existe"):
                 else:
                     items.append(item):
