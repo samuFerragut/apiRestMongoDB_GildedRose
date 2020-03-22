@@ -18,9 +18,9 @@ class Service():
 
     @staticmethod
     def Inventario():
-            db = get_db()
+        db = get_db()
 
-            items = []
-            for item in g.Item.objects():
-                items.append(item)
-            return items
+        items = []
+        for item in g.Item.objects():
+            items.append(item)
+        return items
