@@ -38,7 +38,8 @@ class Service():
     @staticmethod
     def deleteItem(args):
         db = get_db()
-
+        # Para hacer la función de delete se pone Q
+        # antes de los args
         item = g.Item(Q(name=args['name'])
                       & Q(sell_in=args['sell_in'])
                       & Q(quality=args['quality']))
