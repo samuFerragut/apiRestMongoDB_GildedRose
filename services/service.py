@@ -30,7 +30,19 @@ class Service():
     def postItem(args):
         db = get_db()
 
-        item = g.Item(name=args['name'])
-        item.sell_in = args['sell_in']
-        item.quality = args['quality']
+        item = g.Item(name=args['name']
+                      & sell_in=args['sell_in']
+                      & quality=args['quality'])
         item.save()
+
+    @staticmethod
+    def deleteItem(args):
+        db = get_db()
+
+        item = g.Item(Q(name=args['name'])
+                      & Q(sell_in=args['sell_in'])
+                      & Q(quality=args['quality']))
+        if item:
+            item.delete()
+            else:
+                abort(404, message="Este item no existe")
