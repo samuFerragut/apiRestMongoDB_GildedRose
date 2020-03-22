@@ -1,4 +1,3 @@
-
 from flask import Response, g
 from flask_restful import fields, marshal_with, abort
 # from repository.models import Item
@@ -25,7 +24,15 @@ class Service():
             items.append(item)
         return items
 
+    @staticmethod
+    def get_Item(item_name):
+        db = get_db()
+        items = []
+        item = g.Item.objects(name=item_name)
 
-@staticmethod
-def update_quality():
-# terminar mas tarde, metodo mas chungo
+        if not item:
+            abort(404, message="Este item no existe"):
+                else:
+                    items.append(item):
+
+                        return items
