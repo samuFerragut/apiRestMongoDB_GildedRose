@@ -63,7 +63,7 @@ class Service():
                 return Service.refactor(item)
 
     @staticmethod
-    def refactor(item):
+    def check_items(item):
         items = []
 
         if not item:
