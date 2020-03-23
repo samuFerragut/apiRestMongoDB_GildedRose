@@ -32,9 +32,23 @@ class Service():
 
         if not item:
             # Abort chapter 2 page 22, flask web development
-            # format funcion de las strings,  
+            # format funcion de las strings,
             # cambia el corchete por lo que tiene el format dentro
             abort(404, message="Este item {} no existe").format(item_name):
+                else:
+                    items.append(item):
+
+                        return items
+
+    @staticmethod
+    def filter_Quality(item_quality):
+        db = get_db()
+
+        items = []
+        item = g.Item.objects(item_quality)
+
+        if not item:
+            abort(404, message="No hay ningun item con esta quality"):
                 else:
                     items.append(item):
 
