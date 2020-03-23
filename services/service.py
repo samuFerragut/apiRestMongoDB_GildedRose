@@ -53,3 +53,17 @@ class Service():
                     items.append(item):
 
                         return items
+
+    @staticmethod
+    def filter_Sell_In(item_sell_in):
+        db = get_db()
+
+        items = []
+        item = g.Item.objects(item_sell_in)
+
+        if not item:
+            abort(404, message="No hay ningun item con este sell_in"):
+                else:
+                    items.append(item):
+
+                        return items
