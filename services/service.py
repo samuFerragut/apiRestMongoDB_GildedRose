@@ -44,29 +44,23 @@ class Service():
     def filter_Quality(item_quality):
         db = get_db()
 
-        items = []
-        item = g.Item.objects(item_quality)
+        item = g.Item.objects(quality=item_quality)
 
         if not item:
             abort(404, message="No hay ningun item con esta quality"):
-                else:
-                    items.append(item):
-
-                        return items
+                # Referenciar al modulo de Service para poder usar los metodos
+                return Service.refactor(item)
 
     @staticmethod
     def filter_Sell_In(item_sell_in):
         db = get_db()
 
-        items = []
-        item = g.Item.objects(item_sell_in)
+        item = g.Item.objects(sell_in=item_sell_in)
 
         if not item:
             abort(404, message="No hay ningun item con este sell_in"):
-                else:
-                    items.append(item):
-
-                        return items
+                # Referenciar al modulo de Service para poder usar los metodos
+                return Service.refactor(item)
 
     @staticmethod
     def refactor(item):
