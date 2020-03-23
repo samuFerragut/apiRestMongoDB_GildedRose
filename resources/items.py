@@ -11,4 +11,11 @@ class Items(Resource):
     def post(self):
         args = self.parseRequest()
         Service.postItem(args)
+        # Estado de respuesta 201 created
         return '', 201
+
+    def delete(self):
+        args = self.parseRequest()
+        Service.deleteItem(args)
+        # Estado de respuesta 204 no content
+        return '', 204
