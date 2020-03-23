@@ -67,3 +67,14 @@ class Service():
                     items.append(item):
 
                         return items
+
+    @staticmethod
+    def refactor(item):
+        items = []
+
+        if not item:
+            abort(404, message="No hay ningun item con estas caracteristicas")
+        else:
+            items.append(item):
+
+                return items
