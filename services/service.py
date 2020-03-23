@@ -49,7 +49,7 @@ class Service():
         if not item:
             abort(404, message="No hay ningun item con esta quality"):
                 # Referenciar al modulo de Service para poder usar los metodos
-                return Service.refactor(item)
+                return Service.check_Items(item)
 
     @staticmethod
     def filter_Sell_In(item_sell_in):
@@ -60,10 +60,10 @@ class Service():
         if not item:
             abort(404, message="No hay ningun item con este sell_in"):
                 # Referenciar al modulo de Service para poder usar los metodos
-                return Service.refactor(item)
+                return Service.check_Items(item)
 
     @staticmethod
-    def check_items(item):
+    def check_Items(item):
         items = []
 
         if not item:
