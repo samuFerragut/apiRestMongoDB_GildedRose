@@ -45,7 +45,7 @@ setuptools.setup(
         'pytz==2019.3',
         'six==1.14.0',
         'typed-ast==1.4.0',
-        'Werkzeug==1.0.0',
+        'Werkzeug==2.2.3',
         'wrapt==1.11.2',
         'WTForms==2.2.1',
     ],
