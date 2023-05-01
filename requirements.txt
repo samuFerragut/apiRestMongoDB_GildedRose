@@ -2,7 +2,7 @@ aniso8601==8.0.0
 astroid==2.3.3
 Click==7.0
 dnspython==1.16.0
-Flask==1.1.1
+Flask==2.3.2
 Flask-Cors==3.0.9
 flask-mongoengine==0.9.5
 Flask-PyMongo==2.3.0
